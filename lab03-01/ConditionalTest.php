@@ -23,18 +23,27 @@
 
     $grade1 = $_GET["grade1"];
     $grade2 = $_GET["grade2"];
-    $final = (2 * $grade1 + 3 * $grade2) / 5;
+    $final = (3 * $grade1 + 7 * $grade2) / 10;
     
-    if ($final > 89) {
+    if ($final >= 8.5) {
         print("Your final grade is $final. You got an A. Congratulation!");
         $rate = "A";
-    } elseif ($final > 79) {
+    } elseif ($final > 8) {
+        print("Your final grade is $final. You got a B+");
+        $rate = "B";
+    } elseif ($final >= 7) {
         print("Your final grade is $final. You got a B");
         $rate = "B";
-    } elseif ($final > 69) {
+    } elseif ($final >= 6.5) {
+        print("Your final grade is $final. You got a C+");
+        $rate = "C";
+    } elseif ($final >= 5.5) {
         print("Your final grade is $final. You got a C");
         $rate = "C";
-    } elseif ($final > 59) {
+    } elseif ($final >= 5) {
+        print("Your final grade is $final. You got a D+");
+        $rate = "D";
+    } elseif ($final >= 4) {
         print("Your final grade is $final. You got a D");
         $rate = "D";
     } elseif ($final >= 0) {
